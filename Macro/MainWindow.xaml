@@ -48,7 +48,7 @@
                     <Label Content="Delay" HorizontalAlignment="Left" Margin="7,36,0,0" VerticalAlignment="Top" Width="67" FontSize="14" Grid.ColumnSpan="3"/>
                     <Label x:Name="delayCounter1" Content="50ms" Grid.Column="2" HorizontalAlignment="Left" Margin="77,61,0,0" VerticalAlignment="Top" FontSize="14"/>
                     <TextBox HorizontalAlignment="Left" Margin="10,123,0,0" Text="textbox to test spammer" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="5" Height="46"/>
-                    <RadioButton Content="Press enter after message is sent" HorizontalAlignment="Left" Margin="14,94,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="242" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked" FontSize="14"/>
+                    <CheckBox Content="Press Enter after message" HorizontalAlignment="Left" Margin="11,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.389" Grid.ColumnSpan="3" Width="161" Checked="pressEnter_Checked" Unchecked="pressEnter_Unchecked"/>
 
                 </Grid>
             </TabItem>

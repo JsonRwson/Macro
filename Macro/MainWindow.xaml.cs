@@ -159,12 +159,12 @@ namespace WpfApp1
         }
 
         bool pressEnter = false;
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void pressEnter_Checked(object sender, RoutedEventArgs e)
         {
             pressEnter = true;
         }
 
-        private void RadioButton_Unchecked(object sender, RoutedEventArgs e)
+        private void pressEnter_Unchecked(object sender, RoutedEventArgs e)
         {
             pressEnter = false;
         }
