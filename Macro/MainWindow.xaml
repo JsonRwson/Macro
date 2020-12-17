@@ -1,0 +1,73 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Macro" Icon="Icon.ico" ResizeMode="NoResize" Height="277" Width="318">
+
+    <Grid>
+        <TabControl/>
+        <TabControl>
+            <TabItem Header="Autoclicker">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="15.887"/>
+                        <ColumnDefinition Width="279*"/>
+                    </Grid.ColumnDefinitions>
+                    <Slider x:Name="Delay" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Margin="71,41,0,0" Grid.ColumnSpan="4" Maximum="2000" TickPlacement="BottomRight" TickFrequency="10" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"/>
+                    <Label Content="Delay" HorizontalAlignment="Left" Margin="14,33,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Button x:Name="autoButton" Content="Autoclick" HorizontalAlignment="Left" Margin="7,92,0,0" VerticalAlignment="Top" Click="auto_button_click" Width="279" Grid.ColumnSpan="4" Height="27"/>
+                    <Label Content="Clicks =" HorizontalAlignment="Left" Margin="14,5,0,0" VerticalAlignment="Top" Width="59" FontSize="14"/>
+                    <Button Content="Test Clicks" Grid.Column="3" HorizontalAlignment="Left" Margin="68,11,0,0" VerticalAlignment="Top" Width="64" Height="21" Click="testClicks"/>
+                    <Button Content="Reset" Grid.Column="3" HorizontalAlignment="Left" Margin="132,11,0,0" VerticalAlignment="Top" Height="21" Width="61" Click="resetCounter"/>
+                    <Label Content="Current Delay =" HorizontalAlignment="Left" Margin="14,61,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" FontSize="14"/>
+                    <Label x:Name="delayCounter" Content="50 ms" Grid.Column="3" HorizontalAlignment="Left" Margin="28,62,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label  x:Name="clickCounter" Content="0" HorizontalAlignment="Left" Margin="68,5,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="4" Width="88"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Text Spammer">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="210*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="49*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="messageContent" HorizontalAlignment="Left" Margin="36,16,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="19" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <Label Content="Message" HorizontalAlignment="Left" Margin="7,9,0,0" VerticalAlignment="Top" Width="99" Height="29" Grid.ColumnSpan="3" FontSize="14"/>
+                    <Button x:Name="spamButton" Content="Spam" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Width="276" Click="spam_button_click" Grid.ColumnSpan="5" Height="27"/>
+                    <Slider x:Name="Delay1" Grid.Column="2" HorizontalAlignment="Left" Margin="36,43,0,0" VerticalAlignment="Top" Width="208" ValueChanged="Slider_ValueChanged_1" Maximum="2000" Grid.ColumnSpan="3"/>
+
+                    <Label Content="Current Delay = " HorizontalAlignment="Left" Margin="7,60,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="111" FontSize="14"/>
+
+                    <Label Content="Delay" HorizontalAlignment="Left" Margin="7,36,0,0" VerticalAlignment="Top" Width="67" FontSize="14" Grid.ColumnSpan="3"/>
+                    <Label x:Name="delayCounter1" Content="50ms" Grid.Column="2" HorizontalAlignment="Left" Margin="77,61,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <TextBox HorizontalAlignment="Left" Margin="10,123,0,0" Text="textbox to test spammer" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="5" Height="46"/>
+                    <RadioButton Content="Press enter after message is sent" HorizontalAlignment="Left" Margin="14,94,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="242" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked" FontSize="14"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Settings">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="15.887"/>
+                        <ColumnDefinition Width="279*"/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="57,25,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                    <Label Content="Keep Window on Top" Grid.Column="2" HorizontalAlignment="Left" Margin="8,17,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="14"/>
+                    <Label Content="https://github.com/Jayjay8182" HorizontalAlignment="Left" Margin="72,165,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="170"/>
+                    <Label HorizontalContentAlignment="Center" Content="Auto clicker constantly left clicks based on&#xD;&#xA;the delay set" Margin="7,51,13,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="56"/>
+                    <Label HorizontalContentAlignment="Center" Content="Text spammer constantly inputs text then&#xA;will press enter if you choose so, it is based &#xD;&#xA;on the delay set" Margin="9,93,11,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="67"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
